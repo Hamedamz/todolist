@@ -8,7 +8,10 @@
 
     <v-row>
       <v-col v-for="(item, i) in list" :key="i" cols="12">
-        <to-do-card :todo="item" />
+        <to-do-card
+          :todo="item"
+          @delete="deleteCard(i)"
+        />
       </v-col>
     </v-row>
   </v-container>
@@ -53,6 +56,10 @@ export default {
         isDone: false,
         date: new Date().toISOString().slice(0, 22),
       });
+    },
+
+    deleteCard(i) {
+      this.list.splice(i, 1);
     },
 
     saveList() {
