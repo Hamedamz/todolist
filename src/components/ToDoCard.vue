@@ -21,9 +21,36 @@
       <v-icon>mdi-delete</v-icon>
     </v-btn>
 
-    <v-btn icon>
-      <v-icon>mdi-palette</v-icon>
-    </v-btn>
+    <v-menu offset-y left>
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn
+          icon
+          v-bind="attrs"
+          v-on="on"
+        >
+          <v-icon>mdi-palette</v-icon>
+        </v-btn>
+      </template>
+
+      <v-sheet color="white">
+        <v-btn
+          icon
+          @click="setColor('white')"
+        >
+          <v-icon>mdi-water-off</v-icon>
+        </v-btn>
+
+        <v-btn
+          v-for="color in colors"
+          :key="color"
+          :color="color"
+          icon
+          @click="setColor(color)"
+        >
+          <v-icon>mdi-circle</v-icon>
+        </v-btn>
+      </v-sheet>
+    </v-menu>
   </v-card-actions>
 </v-card>
 </template>
