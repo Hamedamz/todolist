@@ -8,7 +8,10 @@
 
     <v-row>
       <v-col v-for="(item, i) in list" :key="i" cols="12">
-        <to-do-card :todo="item" />
+        <to-do-card
+          :todo="item"
+          @set-color="color => setColor(i, color)"
+        />
       </v-col>
     </v-row>
   </v-container>
@@ -53,6 +56,10 @@ export default {
         isDone: false,
         date: new Date().toISOString().slice(0, 22),
       });
+    },
+
+    setColor(i, color) {
+      this.list[i].color = color;
     },
   },
 };
