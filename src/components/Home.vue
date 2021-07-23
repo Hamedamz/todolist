@@ -7,6 +7,7 @@
     </v-row>
 
     <v-row>
+<<<<<<< HEAD
       <v-col
         v-for="(item, i) in list"
         :key="i"
@@ -15,6 +16,12 @@
         <to-do-card
           :todo="item"
           @set-color="color => setColor(i, color)"
+=======
+      <v-col v-for="(item, i) in list" :key="i" cols="12">
+        <to-do-card
+          :todo="item"
+          @delete="deleteCard(i)"
+>>>>>>> feat-delete-card
         />
       </v-col>
     </v-row>
@@ -62,8 +69,13 @@ export default {
       });
     },
 
+<<<<<<< HEAD
     setColor(i, color) {
       this.list[i].color = color;
+=======
+    deleteCard(i) {
+      this.list.splice(i, 1);
+>>>>>>> feat-delete-card
     },
 
     saveList() {

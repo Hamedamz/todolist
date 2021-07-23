@@ -17,7 +17,10 @@
 
     <v-spacer/>
 
-    <v-btn icon>
+    <v-btn
+      icon
+      @click="deleteCard"
+    >
       <v-icon>mdi-delete</v-icon>
     </v-btn>
 
@@ -82,6 +85,10 @@ export default {
   methods: {
     setColor(color) {
       this.$emit('set-color', color);
+    },
+    
+    deleteCard() {
+      this.$emit('delete');
     },
   },
 };
