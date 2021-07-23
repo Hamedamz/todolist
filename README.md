@@ -1,5 +1,9 @@
 # todolist
 
+# Features
+- show list of todo cards
+- add new todo card
+
 ## Project setup
 ```
 yarn install
