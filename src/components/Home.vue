@@ -1,6 +1,12 @@
 <template>
   <v-container>
     <v-row>
+      <v-col cols="12">
+        <to-do-form />
+      </v-col>
+    </v-row>
+
+    <v-row>
       <v-col v-for="(item, i) in list" :key="i" cols="12">
         <to-do-card :todo="item" />
       </v-col>
@@ -10,10 +16,16 @@
 
 <script>
 import ToDoCard from './ToDoCard.vue';
+import ToDoForm from './ToDoForm.vue';
 
 export default {
   name: 'Home',
-  components: { ToDoCard },
+
+  components: {
+    ToDoForm,
+    ToDoCard,
+  },
+
   data() {
     return {
       list: [
