@@ -3,7 +3,7 @@
 # Features
 - show list of todo cards
 - add new todo card
-- delete todo cards
+- change card colors
 
 ## Project setup
 ```
