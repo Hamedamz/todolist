@@ -54,6 +54,23 @@ export default {
         date: new Date().toISOString().slice(0, 22),
       });
     },
+
+    saveList() {
+      localStorage.setItem('__todo_list', JSON.stringify(this.list));
+    },
+
+    loadList() {
+      this.list = JSON.parse(localStorage.getItem('__todo_list')) || [];
+    },
+  },
+
+  created() {
+    this.loadList();
+  },
+
+  updated() {
+    console.log('updated');
+    this.saveList();
   },
 };
 </script>
