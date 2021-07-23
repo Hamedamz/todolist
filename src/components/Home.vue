@@ -7,7 +7,11 @@
     </v-row>
 
     <v-row>
-      <v-col v-for="(item, i) in list" :key="i" cols="12">
+      <v-col
+        v-for="(item, i) in list"
+        :key="i"
+        cols="12"
+      >
         <to-do-card
           :todo="item"
           @set-color="color => setColor(i, color)"
