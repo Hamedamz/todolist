@@ -2,7 +2,7 @@
   <v-container>
     <v-row>
       <v-col cols="12">
-        <to-do-form />
+        <to-do-form @add="addItem"/>
       </v-col>
     </v-row>
 
@@ -43,6 +43,17 @@ export default {
         },
       ],
     };
+  },
+
+  methods: {
+    addItem(text) {
+      this.list.unshift({
+        text,
+        color: 'white',
+        isDone: false,
+        date: new Date().toISOString().slice(0, 22),
+      });
+    },
   },
 };
 </script>

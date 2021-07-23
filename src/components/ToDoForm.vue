@@ -1,6 +1,9 @@
 <template>
 <v-card flat>
-  <v-form>
+  <v-form
+    ref="form"
+    @submit.prevent="onSubmit"
+  >
     <v-card-title>
       <v-text-field
         v-model="text"
@@ -34,6 +37,13 @@ export default {
     return {
       text: '',
     };
+  },
+
+  methods: {
+    onSubmit() {
+      this.$emit('add', this.text);
+      this.$refs.form.reset();
+    },
   },
 };
 </script>
