@@ -12,7 +12,10 @@
 
     <v-spacer/>
 
-    <v-btn icon>
+    <v-btn
+      icon
+      @click="deleteCard"
+    >
       <v-icon>mdi-delete</v-icon>
     </v-btn>
 
@@ -31,6 +34,12 @@ export default {
     todo: {
       type: Object,
       required: true,
+    },
+  },
+
+  methods: {
+    deleteCard() {
+      this.$emit('delete');
     },
   },
 };
