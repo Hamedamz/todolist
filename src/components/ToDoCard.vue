@@ -65,5 +65,24 @@ export default {
       required: true,
     },
   },
+
+  computed: {
+    colors() {
+      return [
+        'red',
+        'amber',
+        'lime',
+        'green',
+        'blue',
+        'purple',
+      ];
+    },
+  },
+
+  methods: {
+    setColor(color) {
+      this.$emit('set-color', color);
+    },
+  },
 };
 </script>
