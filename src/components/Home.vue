@@ -31,13 +31,13 @@ export default {
       list: [
         {
           text: 'Do something',
-          color: '',
+          color: 'white',
           isDone: false,
           date: 'Fri, 23 Jul 2021 07:50',
         },
         {
           text: 'Do something new',
-          color: '',
+          color: 'white',
           isDone: false,
           date: 'Fri, 23 Jul 2021 07:50',
         },
