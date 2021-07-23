@@ -86,7 +86,7 @@ export default {
     setColor(color) {
       this.$emit('set-color', color);
     },
-    
+
     deleteCard() {
       this.$emit('delete');
     },
