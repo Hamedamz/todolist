@@ -11,5 +11,24 @@
 <script>
 export default {
   name: 'Home',
+
+  data() {
+    return {
+      list: [
+        {
+          text: 'Do something',
+          color: '',
+          isDone: false,
+          date: '',
+        },
+        {
+          text: 'Do something new',
+          color: '',
+          isDone: false,
+          date: '',
+        },
+      ],
+    };
+  },
 };
 </script>
