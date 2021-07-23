@@ -1,5 +1,10 @@
 <template>
 <v-card>
+  <v-sheet
+    height="4"
+    :color="todo.color"
+  />
+
   <v-card-title>
     <v-checkbox hide-details class="my-0 py-0"/>
     {{  todo.text }}
